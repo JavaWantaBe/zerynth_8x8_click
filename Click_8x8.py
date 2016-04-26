@@ -65,8 +65,7 @@ class LedDisplay:
 
 
     def __init__(self, cs, max_devices=1, spidrv=SPI0):
-        self.port = spi.Spi.__init__(D13, spidrv, clock=1000000)
-        self.cs = cs
+        self.port = spi.Spi.__init__(cs, spidrv, clock=1000000)
         self.max_devices = max_devices
 
         # The array for shifting the data to the devices
@@ -79,8 +78,6 @@ class LedDisplay:
             self.port.start()
         except PeripheralError as e:
             print(e)
-
-        pinMode( self.cs, OUTPUT)
 
         for i in self.status:
             self.status[i] = 0x00
@@ -115,17 +112,15 @@ class LedDisplay:
         self.lock()
 
         # enable the line
-        digitalWrite(self.cs, LOW)
-        #self.select()
+        self.port.select()
 
         try:
             self.port.write(buffer)
         except Exception as e:
             print(e)
         finally:
-            digitalWrite(self.cs, HIGH)
-            #self.unselect()
-            self.unlock()
+            self.port.unselect()
+            self.port.unlock()
 
     def get_device_count(self):
         """
