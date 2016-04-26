@@ -1,0 +1,9 @@
+{
+    "copyright": "MikroElektronika",
+    "title": "8x8 Display Click",
+    "text":"The 8x8 Click board is a LED matrix that is easy to use and can add visual feedback to a project",
+    "version": "0.1",
+    "files":[
+        ["Click_8x8","Click_8x8.py"]
+    ]
+}

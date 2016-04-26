@@ -1,0 +1,260 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Click 8x8 &mdash; 8x8 Display Click 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/zerynth.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="8x8 Display Click 0.1 documentation" href="index.html"/>
+        <link rel="prev" title="8x8 Display Click" href="index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" class="fa fa-home"> 8x8 Display Click</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Click 8x8</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">8x8 Display Click</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Click 8x8</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="_sources/Click_8x8.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <span class="target" id="module-Click_8x8"></span><div class="section" id="click-8x8">
+<h1>Click 8x8<a class="headerlink" href="#click-8x8" title="Permalink to this headline">¶</a></h1>
+<p>Used with seven segment displays and 8x8 matrix of LEDs.</p>
+<dl class="method">
+<dt id="Click_8x8.get_device_count">
+<code class="descname">get_device_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Click_8x8.get_device_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of devices attached.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Click_8x8.shutdown">
+<code class="descname">shutdown</code><span class="sig-paren">(</span><em>dev_num</em>, <em>powerdown</em><span class="sig-paren">)</span><a class="headerlink" href="#Click_8x8.shutdown" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>dev_num</em> is the device id, with 1 device on the bus, the id of the unit is 0.
+<em>powerdown</em> is a boolean that is <code class="docutils literal"><span class="pre">True</span></code> or <code class="docutils literal"><span class="pre">False</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Click_8x8.set_scan_limit">
+<code class="descname">set_scan_limit</code><span class="sig-paren">(</span><em>dev_num</em>, <em>limit</em><span class="sig-paren">)</span><a class="headerlink" href="#Click_8x8.set_scan_limit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method that is used for seven segment displays that limits the number of digits.</p>
+<p><em>dev_num</em> is the device id, with 1 device on the bus, the id of the unit is 0.
+<em>limit</em> is the number of banks values 0 to 7.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Click_8x8.set_intensity">
+<code class="descname">set_intensity</code><span class="sig-paren">(</span><em>dev_num</em>, <em>intensity</em><span class="sig-paren">)</span><a class="headerlink" href="#Click_8x8.set_intensity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the intensity of the LEDs output.</p>
+<p><em>dev_num</em> is the device id, with 1 device on the bus, the id of the unit is 0.
+<em>intensity</em> is the light output intensity values 0 to 15.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Click_8x8.clear_display">
+<code class="descname">clear_display</code><span class="sig-paren">(</span><em>dev_num</em><span class="sig-paren">)</span><a class="headerlink" href="#Click_8x8.clear_display" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears the display by setting all LEDs to 0.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Click_8x8.set_led">
+<code class="descname">set_led</code><span class="sig-paren">(</span><em>dev_num</em>, <em>row</em>, <em>column</em>, <em>state</em><span class="sig-paren">)</span><a class="headerlink" href="#Click_8x8.set_led" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allows the control of a single LED.
+<em>dev_num</em> is the device id, with 1 device on the bus, the id of the unit is 0.
+<em>row</em> is the row 0 to 7
+<em>column</em> is the column 0 to 7
+<em>state</em> is <code class="docutils literal"><span class="pre">True</span></code> for ON, and <code class="docutils literal"><span class="pre">False</span></code> for OFF</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Click_8x8.set_row">
+<code class="descname">set_row</code><span class="sig-paren">(</span><em>dev_num</em>, <em>row</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Click_8x8.set_row" title="Permalink to this definition">¶</a></dt>
+<dd><p>Controls an entire row.
+<em>dev_num</em> is the device id, with 1 device on the bus, the id of the unit is 0.
+<em>row</em> to control, values from 0 to 7
+<em>value</em> is <code class="docutils literal"><span class="pre">True</span></code> for ON or <code class="docutils literal"><span class="pre">False</span></code> for OFF.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Click_8x8.set_column">
+<code class="descname">set_column</code><span class="sig-paren">(</span><em>dev_num</em>, <em>col</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Click_8x8.set_column" title="Permalink to this definition">¶</a></dt>
+<dd><p>Controls and entire column.0
+<em>dev_num</em> is the device id, with 1 device on the bus, the id of the unit is 0.
+<em>col</em> to control, values from 0 to 7
+<em>value</em> is <code class="docutils literal"><span class="pre">True</span></code> for ON or <code class="docutils literal"><span class="pre">False</span></code> for OFF.</p>
+</dd></dl>
+
+<p>..method:: set_digit(dev_num, digit, value, dp)</p>
+<blockquote>
+<div><p>Used with 7 segment displays to set a digit to display on the 7 segments.</p>
+<p><em>dev_num</em> is the device id, with 1 device on the bus, the id of the unit is 0.
+<em>digit</em> is the bank from 0 to 7 to display
+<em>value</em> is the number value
+<em>dp</em> is the decimal point</p>
+</div></blockquote>
+<p>..method:: set_char(dev_num, digit, value, on_off)</p>
+<blockquote>
+<div><em>dev_num</em> is the device id, with 1 device on the bus, the id of the unit is 0.
+<em>digit</em> bank from 0 to 7
+<em>value</em> is the character value.
+<em>on_off</em> is <code class="docutils literal"><span class="pre">True</span></code> for ON and <code class="docutils literal"><span class="pre">False</span></code> for OFF</div></blockquote>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="8x8 Display Click"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright MikroElektronika.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ <script type="text/javascript">
+ var vurl
+ if(location.href.indexOf("127.0.0.1")>=0) vurl=location.protocol+"//"+location.host+"/docs"
+ else vurl="http://doc.zerynth.com"
+ $(document).ready(function(){
+                   $('.wy-breadcrumbs a:contains("Docs")').before('<a href="'+vurl+'">Zerynth</a> &#187;')
+                   $('.wy-side-nav-search > a').removeClass("fa-home").removeClass("fa")
+                   $('.wy-side-nav-search').prepend('<div class="viper-circle"><a href="'+vurl+'"><span style="color:#1c5e60" class="zerynth-Logo2"></span></a></div>')
+ })
+ </script>
+
+
+</body>
+</html>
