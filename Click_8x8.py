@@ -13,7 +13,7 @@ import spi
 
 
 
-class LedDisplay:
+class LedDisplay(spi.Spi):
     """
 .. class: LedDisplay(cs, max_devices=1, spidrv=SPI0)
 
@@ -65,7 +65,7 @@ class LedDisplay:
 
 
     def __init__(self, cs, max_devices=1, spidrv=SPI0):
-        self.port = spi.Spi.__init__(cs, spidrv, clock=1000000)
+        spi.Spi.__init__(self, cs, spidrv, clock=1000000)
         self.max_devices = max_devices
 
         # The array for shifting the data to the devices
@@ -73,11 +73,6 @@ class LedDisplay:
 
         # We keep track of the led-status for all 8 devices in this array
         self.status = bytearray(64)
-
-        try:
-            self.port.start()
-        except PeripheralError as e:
-            print(e)
 
         for i in self.status:
             self.status[i] = 0x00
@@ -112,15 +107,15 @@ class LedDisplay:
         self.lock()
 
         # enable the line
-        self.port.select()
+        self.select()
 
         try:
-            self.port.write(buffer)
+            self.write(buffer)
         except Exception as e:
             print(e)
         finally:
-            self.port.unselect()
-            self.port.unlock()
+            self.unselect()
+            self.unlock()
 
     def get_device_count(self):
         """
